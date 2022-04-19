@@ -1,0 +1,15 @@
+<div class="container mr-5">
+    <form class="from-group ">
+            <div class="col-md-7 mt-3">
+            <label>UserEmail</label>
+            <input [(ngModel)]="userEmail" type="email" class=" mt -2 form-control"  name="userEmail" placeholder="Enter Your Email address">
+        </div>
+        <div class="col-md-7 mt-3 ">
+            <label>Password</label>
+            <input [(ngModel)]="userPassword" type="password" class="mt -2 form-control "  name="userPassword" placeholder="Enter Your Name">
+        </div>
+        <div class="col-md-2 mt-3">
+        <button (click)="userSignIn()" type="submit"  class=" mt -2 btn btn-primary form-control">Sign In</button>
+    </div>
+    </form>
+    </div>

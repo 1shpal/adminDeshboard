@@ -1,0 +1,43 @@
+<!-- <mat-toolbar color="warning">
+    <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar> -->
+
+<app-leftnav (toggledEvent)="drawer.toggle()">
+
+</app-leftnav>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-list role="list">
+            <mat-list-item role="listitem"routerLink="userSignIn">Sign In</mat-list-item>
+            <mat-list-item role="listitem"routerLink="addProduct">Add Product</mat-list-item>
+            <mat-list-item role="listitem"routerLink="editProduct">Edit Product</mat-list-item>
+            <mat-list-item role="listitem"routerLink="editCategory">Edit Category</mat-list-item>
+            <mat-list-item role="listitem"routerLink="addCategory">Add category</mat-list-item>
+            <mat-list-item role="listitem"routerLink="viewProduct">View Product</mat-list-item>
+            <mat-list-item role="listitem"routerLink="viewCategory">View Category</mat-list-item>
+            <mat-list-item role="listitem"routerLink="viewUserList">User List</mat-list-item>
+
+          </mat-list>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <!-- <button type="button"mat-button>
+        Toggle sidenav
+      </button> -->
+    <mat-card class="main-contant">
+        <mat-card-content>
+        <router-outlet></router-outlet>
+        </mat-card-content>
+    </mat-card>
+    </div>
+  </mat-drawer-container>
